@@ -41,7 +41,7 @@ export default function Searchbar() {
     setSearchData("");
   };
   return (
-    <div className={styles.serchbarDesign}>
+    <div className={styles.customSearchbar}>
       <div className={styles.input} ref={dropdownRef} onClick={() => setDropdownOpen(!dropdownOpen)}>
         <input
           className={dropdownOpen ? styles.inputStyleChange : ""}
