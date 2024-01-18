@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from './searchbar.module.scss';
 import DownIcon from '@/shared/icons/downicon';
 import classNames from 'classnames';
@@ -11,6 +11,7 @@ export default function Searchbar() {
     const [selectedFruit, setSelectedFruit] = useState("");
     const [searchData, setSearchData] = useState("");
     const dropdownRef = useRef(null)
+    const dataRef = useRef(null)
 
     useClickOutside(dropdownRef, () => {
       if (dropdownOpen) {
@@ -18,6 +19,17 @@ export default function Searchbar() {
         setSearchData("")
       }
     })
+
+    useEffect(() => {
+        if (dropdownOpen) {
+            dataRef.current.scrollTop = 0;
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth',
+            });
+        }
+    }, [dropdownOpen]);
     const HandleSearchFruit=(e)=>{
         setDropdownOpen(true)
         setSearchData(e.target.value)
@@ -30,14 +42,14 @@ export default function Searchbar() {
     }
     return (
         <div className={styles.serchbarDesign}>
-            <div className={styles.input} ref={dropdownRef}>
-                <input type='text' value={dropdownOpen ?searchData :selectedFruit  } placeholder='Search and select a Fruit' onChange={(e)=>HandleSearchFruit(e)} />
-                <div className={styles.icon} onClick={() => setDropdownOpen(!dropdownOpen)}>
+            <div className={styles.input} ref={dropdownRef} onClick={() => setDropdownOpen(!dropdownOpen)}>
+                <input className={ dropdownOpen ?  styles.inputStyleChange : ''} type='text' value={dropdownOpen ?searchData :selectedFruit  } placeholder='Choose a Fruit:' onChange={(e)=>HandleSearchFruit(e)} />
+                <div className={styles.icon} >
                     <div className={ classNames(styles.iconAnimation , dropdownOpen ? styles.toogle : '') }>
                         <DownIcon />
                     </div>
                 </div>
-                <div className={ classNames(styles.dropdown ,dropdownOpen ? styles.show : styles.hide ) }>
+                <div className={ classNames(styles.dropdown ,dropdownOpen ? styles.show : styles.hide ) } ref={dataRef}>
                     {fruitList?.filter((data)=> data?.fruitname.toLowerCase().includes(searchData)).length > 0 ?
                         fruitList?.filter((data)=> data?.fruitname.toLowerCase().includes(searchData))?.map((fruit,i) => {
                             return (
@@ -52,6 +64,7 @@ export default function Searchbar() {
                              <span>No Match Found</span>
                          </div>
                     }
+              
                 </div>
             </div>
         </div>
