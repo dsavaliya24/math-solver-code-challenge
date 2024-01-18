@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+
+@mixin font16-medium {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: $primary-font-family;
+    font-weight: 500;
+}
+
+@mixin font14-medium {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: $primary-font-family;
+    font-weight: 500;
+}

@@ -1,0 +1,10 @@
+@import '../../../styles/mixins/index.scss';
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 60px 0;
+    img {
+        max-width: 280px;
+    }
+}

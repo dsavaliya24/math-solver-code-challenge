@@ -1,0 +1,14 @@
+@import '../../styles/mixins/index.scss';
+
+.homepageWrapper {
+    background-color: $theme-page-background-color;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .box {
+        width: 550px;
+        margin: 0 auto;
+    }
+}

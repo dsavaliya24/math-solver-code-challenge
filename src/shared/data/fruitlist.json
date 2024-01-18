@@ -1,0 +1,43 @@
+[
+    {
+        "fruitId":1,
+        "fruitname":"Apple",
+        "fruitimage":"/assets/icons/apple.png"
+    },
+    {
+        "fruitId":2,
+        "fruitname":"Kiwi",
+        "fruitimage":"/assets/icons/apple.png"
+    },
+    {
+        "fruitId":3,
+        "fruitname":"Banana",
+        "fruitimage":"/assets/icons/apple.png"
+    },
+    {
+        "fruitId":4,
+        "fruitname":"Strawberry",
+        "fruitimage":"/assets/icons/apple.png"
+    },
+    {
+        "fruitId":5,
+        "fruitname":"Grapes",
+        "fruitimage":"/assets/icons/apple.png"
+    },
+    {
+        "fruitId":6,
+        "fruitname":"Pineapple",
+        "fruitimage":"/assets/icons/apple.png"
+    },
+    {
+        "fruitId":7,
+        "fruitname":"Mango",
+        "fruitimage":"/assets/icons/mango.png"
+    },
+    {
+        "fruitId":8,
+        "fruitname":"Watermalon",
+        "fruitimage":"/assets/icons/apple.png"
+    }
+
+]

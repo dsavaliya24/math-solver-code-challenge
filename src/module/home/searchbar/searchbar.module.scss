@@ -1,0 +1,107 @@
+@import '../../../styles/mixins/index.scss';
+
+.serchbarDesign {
+    .input {
+        position: relative;
+
+        .dropdown {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 50px;
+            border-radius: 8px;
+            border: 1px solid $theme-dropdown-border-color;
+            background: $theme-dropdown-background-color;
+            box-shadow: $theme-dropdown-boxshadow;
+
+            &.hide {
+                max-height: 0px;
+                overflow: hidden;
+                transition: .3s ease-in-out;
+                visibility: hidden;
+            }
+
+            &.show {
+                max-height: 250px;
+                overflow: auto;
+                overflow-x: hidden;
+                transition: .3s ease-in-out;
+                visibility: visible;
+            }
+
+            .items:last-child {
+                border: none;
+            }
+
+            .items {
+                display: grid;
+                grid-template-columns: 20px 1fr;
+                align-items: center;
+                cursor: pointer;
+                padding: 14px;
+                border-bottom: 1px solid $theme-dropdown-border-color;
+                gap: 5px;
+                transition: .3s  ease-in-out;
+                &:hover {
+                    background-color: $theme-dropdown-hover-background-color;
+                }
+
+                img {
+                    width: 20px;
+                }
+
+                span {
+                    display: block;
+                    @include font14-medium;
+                    font-weight: 400;
+                }
+            }
+
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            .toogle {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .iconAnimation {
+                svg {
+                    transition: .3s ease-in-out;
+                }
+            }
+        }
+
+        input {
+            width: 100%;
+            border: 1px solid $theme-input-border-color;
+            @include font16-medium;
+            height: 50px;
+            padding: 0 30px 0 16px;
+            border-radius: 6px;
+            color: $theme-input-text-color;
+            transition: .3s ease-in-out;
+
+            &:focus {
+                outline: none;
+                border: 1px solid $theme-input-focus-border-color;
+            }
+        }
+
+        ::placeholder {
+            @include font16-medium;
+            color: $theme-input-placeholder-color;
+        }
+    }
+
+
+}
