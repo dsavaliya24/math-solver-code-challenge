@@ -7,27 +7,27 @@
     {
         "fruitId":2,
         "fruitname":"Kiwi",
-        "fruitimage":"/assets/icons/apple.png"
+        "fruitimage":"/assets/icons/kiwi.png"
     },
     {
         "fruitId":3,
         "fruitname":"Banana",
-        "fruitimage":"/assets/icons/apple.png"
+        "fruitimage":"/assets/icons/banana.png"
     },
     {
         "fruitId":4,
         "fruitname":"Strawberry",
-        "fruitimage":"/assets/icons/apple.png"
+        "fruitimage":"/assets/icons/strawberry.png"
     },
     {
         "fruitId":5,
         "fruitname":"Grapes",
-        "fruitimage":"/assets/icons/apple.png"
+        "fruitimage":"/assets/icons/grapes.png"
     },
     {
         "fruitId":6,
         "fruitname":"Pineapple",
-        "fruitimage":"/assets/icons/apple.png"
+        "fruitimage":"/assets/icons/pineapple.png"
     },
     {
         "fruitId":7,
@@ -37,7 +37,42 @@
     {
         "fruitId":8,
         "fruitname":"Watermalon",
-        "fruitimage":"/assets/icons/apple.png"
+        "fruitimage":"/assets/icons/watermalon.png"
+    },
+    {
+        "fruitId":9,
+        "fruitname":"Gauva",
+        "fruitimage":"/assets/icons/gauva.png"
+    },
+    {
+        "fruitId":10,
+        "fruitname":"Orange",
+        "fruitimage":"/assets/icons/orange.png"
+    },
+    {
+        "fruitId":11,
+        "fruitname":"Pomegranate",
+        "fruitimage":"/assets/icons/pomegranate.png"
+    },
+    {
+        "fruitId":12,
+        "fruitname":"Papaya",
+        "fruitimage":"/assets/icons/papaya.png"
+    },
+    {
+        "fruitId":13,
+        "fruitname":"Custard apple",
+        "fruitimage":"/assets/icons/custardapple.png"
+    },
+    {
+        "fruitId":14,
+        "fruitname":"Avocado",
+        "fruitimage":"/assets/icons/avocado.png"
+    },
+    {
+        "fruitId":15,
+        "fruitname":"Cherry",
+        "fruitimage":"/assets/icons/cherry.png"
     }
 
 ]
