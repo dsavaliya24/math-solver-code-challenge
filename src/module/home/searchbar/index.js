@@ -38,7 +38,7 @@ export default function Searchbar() {
                     </div>
                 </div>
                 <div className={ classNames(styles.dropdown ,dropdownOpen ? styles.show : styles.hide ) }>
-                    {
+                    {fruitList?.filter((data)=> data?.fruitname.toLowerCase().includes(searchData)).length > 0 ?
                         fruitList?.filter((data)=> data?.fruitname.toLowerCase().includes(searchData))?.map((fruit,i) => {
                             return (
                                 <div className={styles.items} key={i} onClick={()=>HandleSelectFruit(fruit?.fruitname)}>
@@ -47,6 +47,10 @@ export default function Searchbar() {
                                 </div>
                             )
                         })
+                        : 
+                        <div className={styles.noitems} >   
+                             <span>No Match Found</span>
+                         </div>
                     }
                 </div>
             </div>

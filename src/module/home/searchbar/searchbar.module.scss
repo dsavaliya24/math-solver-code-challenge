@@ -56,6 +56,25 @@
                     font-weight: 400;
                 }
             }
+            .noitems {
+                display: grid;
+                grid-template-columns: 1fr;
+                align-items: center;
+                cursor: pointer;
+                padding: 14px;
+                border-bottom: 1px solid $theme-dropdown-border-color;
+                gap: 5px;
+                transition: .3s  ease-in-out;
+                &:hover {
+                    background-color: $theme-dropdown-hover-background-color;
+                }
+
+                span {
+                    display: block;
+                    @include font14-medium;
+                    font-weight: 400;
+                }
+            }
 
         }
 
